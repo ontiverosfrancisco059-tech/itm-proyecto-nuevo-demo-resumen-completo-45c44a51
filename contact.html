@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Contacto - Proyecto Nuevo Demo - Resumen Completo</title>
+<link rel="stylesheet" href="styles.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<h1 class="logo" data-eb-editable="text" data-eb-key="contact.h1.1" data-eb-role="h1" data-eb-kind="text">Proyecto Nuevo Demo - Resumen Completo</h1>
+<nav class="site-nav">
+<ul>
+<li><a href="index.html" data-eb-editable="link" data-eb-key="contact.a.2" data-eb-role="a" data-eb-kind="link">Home</a></li>
+<li><a href="catalog.html" data-eb-editable="link" data-eb-key="contact.a.3" data-eb-role="a" data-eb-kind="link">Catalog</a></li>
+<li><a href="about.html" data-eb-editable="link" data-eb-key="contact.a.4" data-eb-role="a" data-eb-kind="link">About</a></li>
+<li><a href="contact.html" aria-current="page" data-eb-editable="link" data-eb-key="contact.a.5" data-eb-role="a" data-eb-kind="link">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="info fade-in" data-section="info">
+<div class="container">
+<h2 data-eb-editable="text" data-eb-key="contact.h2.6" data-eb-role="h2" data-eb-kind="text">Información de contacto</h2>
+<p data-eb-editable="text" data-eb-key="contact.p.7" data-eb-role="p" data-eb-kind="text"><strong>Teléfono:</strong> <span data-eb-editable="phone">8112345678</span></p>
+<p data-eb-editable="text" data-eb-key="contact.p.8" data-eb-role="p" data-eb-kind="text"><strong>Dirección:</strong> <span data-eb-editable="address">Av. Siempre Viva 123, Monterrey, NL</span></p>
+<p data-eb-editable="text" data-eb-key="contact.p.9" data-eb-role="p" data-eb-kind="text"><strong>Horario:</strong> <span data-eb-editable="schedule">Lun-Sab 9am-7pm</span></p>
+</div>
+</section>
+
+<section class="map fade-in" data-section="map">
+<div class="container">
+<h2 data-eb-editable="text" data-eb-key="contact.h2.10" data-eb-role="h2" data-eb-kind="text">Ubicación</h2>
+<img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="Mapa de la ubicación" data-eb-editable="map_image">
+</div>
+</section>
+
+<section class="whatsapp-cta cta fade-in" data-section="whatsapp-cta">
+<div class="container">
+<h2 data-eb-editable="text" data-eb-key="contact.h2.11" data-eb-role="h2" data-eb-kind="text">¿Tienes preguntas?</h2>
+<p data-eb-editable="text" data-eb-key="contact.p.12" data-eb-role="p" data-eb-kind="text">Chatea directamente con nosotros por WhatsApp.</p>
+<a href="https://wa.me/8112345678" class="btn btn-primary" data-eb-editable="whatsapp_link">Chat on WhatsApp</a>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container">
+<p data-eb-editable="text" data-eb-key="contact.p.13" data-eb-role="p" data-eb-kind="text">© <span id="year"></span> Proyecto Nuevo Demo - Resumen Completo. Todos los derechos reservados.</p>
+</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// fade-in on scroll (simple)
+document.addEventListener('DOMContentLoaded', function() {
+  const fades = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, {threshold: 0.1});
+  fades.forEach(fade => observer.observe(fade));
+});
+</script>
+</body>
+</html>
