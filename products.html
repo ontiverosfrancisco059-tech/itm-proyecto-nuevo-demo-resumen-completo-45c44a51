@@ -1,1 +1,88 @@
-<!DOCTYPE html>\n<html lang="es">\n<head>\n  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>TechNova Demo Store - Productos</title>\n  <link rel="stylesheet" href="styles.css">\n</head>\n<body>\n  <a href="#main-content" class="skip-link" data-eb-editable="link" data-eb-key="products.a.1" data-eb-role="a" data-eb-kind="link">Saltar al contenido</a>\n  <header class="site-header">\n    <div class="container">\n      <div class="logo" data-editable="business_name">Proyecto Nuevo Demo - Resumen Completo</div>\n      <button class="nav-toggle" aria-label="Abrir menú" data-eb-editable="link" data-eb-key="products.button.2" data-eb-role="button" data-eb-kind="link">\n        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>\n      </button>\n      <nav class="nav-menu" id="nav-menu">\n        <ul>\n          <li><a href="index.html" data-eb-editable="link" data-eb-key="products.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a></li>\n          <li><a href="products.html" aria-current="page" data-eb-editable="link" data-eb-key="products.a.4" data-eb-role="a" data-eb-kind="link">Productos</a></li>\n          <li><a href="about.html" data-eb-editable="link" data-eb-key="products.a.5" data-eb-role="a" data-eb-kind="link">Nosotros</a></li>\n          <li><a href="blog.html" data-eb-editable="link" data-eb-key="products.a.6" data-eb-role="a" data-eb-kind="link">Blog</a></li>\n          <li><a href="contact.html" data-eb-editable="link" data-eb-key="products.a.7" data-eb-role="a" data-eb-kind="link">Contacto</a></li>\n        </ul>\n      </nav>\n    </div>\n  </header>\n  <main id="main-content">\n    <section class="filter-bar" data-section="filter-bar">\n      <div class="container">\n        <label for="filter-category" class="filter-label" data-editable="filter_category_label">Categoría:</label>\n        <select id="filter-category" aria-label="Filtrar por categoría">\n          <option value="all">Todas</option>\n          <option value="smartphones">Smartphones</option>\n          <option value="laptops">Laptops</option>\n          <option value="audio">Audio</option>\n        </select>\n        <label for="filter-price" class="filter-label" data-editable="filter_price_label">Precio:</label>\n        <select id="filter-price" aria-label="Filtrar por precio">\n          <option value="any">Cualquiera</option>\n          <option value="low">Bajo</option>\n          <option value="medium">Medio</option>\n          <option value="high">Alto</option>\n        </select>\n        <button class="btn btn-outline" id="reset-filter" data-editable="reset_filter_text" data-eb-editable="link" data-eb-key="products.button.8" data-eb-role="button" data-eb-kind="link">Restablecer</button>\n      </div>\n    </section>\n    <section class="product-grid" data-section="product-grid">\n      <div class="container">\n        <!-- Product cards -->\n        <div class="product-card" data-editable="product_1">\n          <img src="https://via.placeholder.com/300x200?text=Smartphone" alt="Smartphone demo" data-eb-editable="image" data-eb-key="products.img.9" data-eb-role="img" data-eb-kind="image">\n          <h3 class="product-title" data-editable="product_1_title" data-eb-editable="text" data-eb-key="products.h3.10" data-eb-role="h3" data-eb-kind="text">Smartphone X200</h3>\n          <p class="product-desc" data-editable="product_1_desc" data-eb-editable="text" data-eb-key="products.p.11" data-eb-role="p" data-eb-kind="text">Pantalla 6.5", 128GB, cámara 48MP.</p>\n          <a href="#" class="btn btn-outline" data-editable="product_1_cta" data-eb-editable="link" data-eb-key="products.a.12" data-eb-role="a" data-eb-kind="link">Ver detalle</a>\n        </div>\n        <div class="product-card" data-editable="product_2">\n          <img src="https://via.placeholder.com/300x200?text=Laptop" alt="Laptop demo" data-eb-editable="image" data-eb-key="products.img.13" data-eb-role="img" data-eb-kind="image">\n          <h3 class="product-title" data-editable="product_2_title" data-eb-editable="text" data-eb-key="products.h3.14" data-eb-role="h3" data-eb-kind="text">Laptop Pro 15"</h3>\n          <p class="product-desc" data-editable="product_2_desc" data-eb-editable="text" data-eb-key="products.p.15" data-eb-role="p" data-eb-kind="text">Intel i7, 16GB RAM, SSD 512GB.</p>\n          <a href="#" class="btn btn-outline" data-editable="product_2_cta" data-eb-editable="link" data-eb-key="products.a.16" data-eb-role="a" data-eb-kind="link">Ver detalle</a>\n        </div>\n        <div class="product-card" data-editable="product_3">\n          <img src="https://via.placeholder.com/300x200?text=Headphones" alt="Headphones demo" data-eb-editable="image" data-eb-key="products.img.17" data-eb-role="img" data-eb-kind="image">\n          <h3 class="product-title" data-editable="product_3_title" data-eb-editable="text" data-eb-key="products.h3.18" data-eb-role="h3" data-eb-kind="text">Auriculares Inalámbricos Z5</h3>\n          <p class="product-desc" data-editable="product_3_desc" data-eb-editable="text" data-eb-key="products.p.19" data-eb-role="p" data-eb-kind="text">Cancelación de ruido, 30h batería.</p>\n          <a href="#" class="btn btn-outline" data-editable="product_3_cta" data-eb-editable="link" data-eb-key="products.a.20" data-eb-role="a" data-eb-kind="link">Ver detalle</a>\n        </div>\n      </div>\n    </section>\n    <section class="pagination" data-section="pagination">\n      <div class="container">\n        <nav aria-label="Navegación de productos">\n          <button class="btn btn-outline" data-editable="prev_page" data-eb-editable="link" data-eb-key="products.button.21" data-eb-role="button" data-eb-kind="link">Anterior</button>\n          <span class="page-info" data-editable="page_info">Página 1 de 5</span>\n          <button class="btn btn-outline" data-editable="next_page" data-eb-editable="link" data-eb-key="products.button.22" data-eb-role="button" data-eb-kind="link">Siguiente</button>\n        </nav>\n      </div>\n    </section>\n    <section class="cta-whatsapp-banner" data-section="cta-whatsapp-banner">\n      <div class="container">\n        <h2 class="section-title" data-editable="cta_title" data-eb-editable="text" data-eb-key="products.h2.23" data-eb-role="h2" data-eb-kind="text">¿Listo para comprar?</h2>\n        <p class="cta-text" data-editable="cta_text" data-eb-editable="text" data-eb-key="products.p.24" data-eb-role="p" data-eb-kind="text">Envíanos un mensaje por WhatsApp y recibe asesoría personalizada.</p>\n        <a href="https://wa.me/8112345678?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20productos" class="btn btn-primary" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="products.a.25" data-eb-role="a" data-eb-kind="link">\n          Chat en WhatsApp\n          <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5S6.1 1.7 3.9 3.9c-2.2 2.2-2.2 5.1 0 7.3l12.5 12.5c2.2 2.2 5.1 2.2 7.3 0l3.8-3.8c2.2-2.2 2.2-5.1 0-7.3zM4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8-8-3.6-8-8z" fill="#fff"/></svg>\n        </a>\n      </div>\n    </section>\n  </main>\n  <footer class="site-footer">\n    <div class="container">\n      <div class="footer-info">\n        <p class="footer-text" data-editable="footer_description" data-eb-editable="text" data-eb-key="products.p.26" data-eb-role="p" data-eb-kind="text">Tienda demo completa para pruebas</p>\n        <p class="footer-contact" data-editable="footer_phone" data-eb-editable="text" data-eb-key="products.p.27" data-eb-role="p" data-eb-kind="text">Tel: <a href="tel:8112345678" data-eb-editable="link" data-eb-key="products.a.28" data-eb-role="a" data-eb-kind="link">8112345678</a></p>\n        <p class="footer-schedule" data-editable="footer_schedule" data-eb-editable="text" data-eb-key="products.p.29" data-eb-role="p" data-eb-kind="text">Lun-Sab 9am-7pm</p>\n      </div>\n    </div>\n  </footer>\n  <script>\n    // Simple mobile menu toggle\n    document.querySelector('.nav-toggle').addEventListener('click', function () {\n      document.getElementById('nav-menu').classList.toggle('open');\n    });\n  </script>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Proyecto Nuevo Demo - Resumen Completo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 data-eb-editable="text" data-eb-key="products.h1.1" data-eb-role="h1" data-eb-kind="text">Proyecto Nuevo Demo - Resumen Completo</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-eb-editable="link" data-eb-key="products.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a></li>
+                    <li><a href="products.html" class="active" data-eb-editable="link" data-eb-key="products.a.3" data-eb-role="a" data-eb-kind="link">Productos</a></li>
+                    <li><a href="about.html" data-eb-editable="link" data-eb-key="products.a.4" data-eb-role="a" data-eb-kind="link">Nosotros</a></li>
+                    <li><a href="contact.html" data-eb-editable="link" data-eb-key="products.a.5" data-eb-role="a" data-eb-kind="link">Contacto</a></li>
+                    <li><a href="faq.html" data-eb-editable="link" data-eb-key="products.a.6" data-eb-role="a" data-eb-kind="link">Preguntas Frecuentes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="product-grid">
+        <div class="container">
+            <h1 data-eb-editable="text" data-eb-key="products.h1.7" data-eb-role="h1" data-eb-kind="text">Catálogo de Productos</h1>
+            <div class="grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="smartphone on white background" data-eb-editable="image" data-eb-key="products.img.8" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.9" data-eb-role="h3" data-eb-kind="text">Smartphone Modelo X</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.10" data-eb-role="p" data-eb-kind="text">$12,999</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.11" data-eb-role="p" data-eb-kind="text">Último generación, pantalla OLED, 128GB almacenamiento.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Smartphone%20Modelo%20X" class="btn" data-eb-editable="link" data-eb-key="products.a.12" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="laptop open on desk" data-eb-editable="image" data-eb-key="products.img.13" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.14" data-eb-role="h3" data-eb-kind="text">Laptop Pro 15"</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.15" data-eb-role="p" data-eb-kind="text">$22,999</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.16" data-eb-role="p" data-eb-kind="text">Procesador i7, 16GB RAM, 512GB SSD, gráfica dedicada.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Laptop%20Pro%2015%22" class="btn" data-eb-editable="link" data-eb-key="products.a.17" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="smartphone on white background" data-eb-editable="image" data-eb-key="products.img.18" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.19" data-eb-role="h3" data-eb-kind="text">Tablet Ultra</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.20" data-eb-role="p" data-eb-kind="text">$8,999</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.21" data-eb-role="p" data-eb-kind="text">Pantalla 10.5", 64GB, compatible con stylus.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Tablet%20Ultra" class="btn" data-eb-editable="link" data-eb-key="products.a.22" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="laptop open on desk" data-eb-editable="image" data-eb-key="products.img.23" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.24" data-eb-role="h3" data-eb-kind="text">Monitor 4K 27"</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.25" data-eb-role="p" data-eb-kind="text">$6,499</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.26" data-eb-role="p" data-eb-kind="text">Resolución 3840x2160, HDR, puerto USB-C.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Monitor%204K%2027%22" class="btn" data-eb-editable="link" data-eb-key="products.a.27" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="smartphone on white background" data-eb-editable="image" data-eb-key="products.img.28" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.29" data-eb-role="h3" data-eb-kind="text">Auriculares Inalámbricos</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.30" data-eb-role="p" data-eb-kind="text">$1,499</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.31" data-eb-role="p" data-eb-kind="text">Cancelación de ruido, 30h batería, carga rápida.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Auriculares%20Inalámbricos" class="btn" data-eb-editable="link" data-eb-key="products.a.32" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=media-fallback%2Fimagen-generica.jpg" alt="laptop open on desk" data-eb-editable="image" data-eb-key="products.img.33" data-eb-role="img" data-eb-kind="image">
+                    <h3 data-eb-editable="text" data-eb-key="products.h3.34" data-eb-role="h3" data-eb-kind="text">Teclado Mecánico RGB</h3>
+                    <p class="price" data-eb-editable="text" data-eb-key="products.p.35" data-eb-role="p" data-eb-kind="text">$1,999</p>
+                    <p class="description" data-eb-editable="text" data-eb-key="products.p.36" data-eb-role="p" data-eb-kind="text">Switches Cherry MX, retroiluminación RGB por tecla.</p>
+                    <a href="https://wa.me/528112345678?text=Quiero%20cotizar%20Teclado%20Mec%C3%A1nico%20RGB" class="btn" data-eb-editable="link" data-eb-key="products.a.37" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-eb-editable="text" data-eb-key="products.p.38" data-eb-role="p" data-eb-kind="text">&copy; 2026 Proyecto Nuevo Demo - Resumen Completo. Todos los derechos reservados.</p>
+            <p data-eb-editable="text" data-eb-key="products.p.39" data-eb-role="p" data-eb-kind="text">Teléfono: 8112345678 | Monterrey, NL</p>
+        </div>
+    </footer>
+</body>
+</html>
