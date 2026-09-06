@@ -1,421 +1,274 @@
-/* ==== TechNova Demo Store – styles.css ==== */
-
-/* ---------- 1. CSS Custom Properties (Design Tokens) ---------- */
 :root {
-  /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-size-base: 1rem;          /* 16px */
-  --font-size-lg: 1.125rem;        /* 18px */
-  --font-size-xl: 1.25rem;         /* 20px */
-  --font-size-2xl: 1.5rem;         /* 24px */
-  --font-size-3xl: 1.875rem;       /* 30px */
-  --font-size-4xl: 2.25rem;        /* 36px */
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* Spacing (8px baseline) */
-  --space-0_5: 0.25rem;   /* 4px */
-  --space-1: 0.5rem;      /* 8px */
-  --space-2: 1rem;        /* 16px */
-  --space-3: 1.5rem;      /* 24px */
-  --space-4: 2rem;        /* 32px */
-  --space-5: 2.5rem;      /* 40px */
-  --space-6: 3rem;        /* 48px */
-  --space-8: 4rem;        /* 64px */
-  
-  /* Radii */
-  --radius-sm: 0.25rem;   /* 4px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.06);
-  
-  /* Colors – cool blues with accent orange */
-  --color-bg: #f8fafc;
-  --color-surface: #ffffff;
-  --color-primary: #2563eb;        /* cool blue */
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #dbeafe;
-  --color-accent: #f97316;         /* vibrant orange */
-  --color-accent-dark: #ea580c;
-  --color-text: #1e293b;
-  --color-muted: #64748b;
-  --color-border: #e2e8f0;
-  --color-success: #10b981;
-  --color-error: #ef4444;
-  
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-normal: 250ms ease;
+    --primary-color: #0066ff;
+    --accent-color: #ff6600;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --border-radius: 4px;
+    --spacing: 8px;
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto Mono', monospace;
 }
 
-/* ---------- 2. Global Reset & Base Styles ---------- */
-*, *::before, *::after {
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-html {
-  font-size: 100%; /* 16px */
-  scroll-behavior: smooth;
-}
+
 body {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-button, input, textarea, select {
-  font: inherit;
+    font-family: var(--font-primary);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Skip link */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.skip-link:focus {
-  left: 1rem;
-  top: 1rem;
-  background: var(--color-primary);
-  color: var(--color-surface);
-  padding: .5rem .75rem;
-  border-radius: var(--radius-sm);
-  z-index: 1000;
-}
-
-/* ---------- 3. Layout Containers ---------- */
 .container {
-  width: 90%;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--space-2);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing) 0;
 }
 
-/* ---------- 4. Typography Helpers ---------- */
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
-  margin-top: 0;
-  margin-bottom: var(--space-2);
-}
-.h1 { font-size: var(--font-size-4xl); }
-.h2 { font-size: var(--font-size-3xl); }
-.h3 { font-size: var(--font-size-2xl); }
-.h4 { font-size: var(--font-size-xl); }
-.h5 { font-size: var(--font-size-lg); }
-.h6 { font-size: var(--font-size-base); }
-
-.section-title { @apply .h2; color: var(--color-primary); }
-.section-intro { color: var(--color-muted); margin-bottom: var(--space-4); }
-
-/* ---------- 5. Button Styles ---------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  padding: 0 var(--space-3);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-base);
-  border-radius: var(--radius-md);
-  cursor: pointer;
-  border: none;
-  transition: background-color var(--transition-normal), color var(--transition-normal), box-shadow var(--transition-normal);
-  white-space: nowrap;
-}
-.btn:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.btn-primary {
-  background-color: var(--color-primary);
-  color: var(--color-surface);
-}
-.btn-primary:hover {
-  background-color: var(--color-primary-dark);
-}
-.btn-primary:active {
-  background-color: #1e40af;
-  transform: translateY(1px);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-}
-.btn-outline:hover {
-  background-color: var(--color-primary-light);
-}
-.btn-outline:active {
-  background-color: #bfdbfe;
-  transform: translateY(1px);
-}
-
-.btn-icon {
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-}
-
-/* ---------- 6. Header & Navigation ---------- */
-.site-header {
-  background-color: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  z-index: 900;
-}
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 4.5rem; /* 72px */
-}
-.logo {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-}
-
-.nav-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.nav-toggle svg {
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.nav-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: none; /* hidden by default, shown via .open */
-  flex-direction: column;
-  gap: var(--space-2);
-}
-.nav-menu.open {
-  display: flex;
-}
-.nav-menu li a {
-  display: block;
-  padding: var(--space-1_5) var(--space-2);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text);
-  border-radius: var(--radius-sm);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-}
-.nav-menu li a:hover,
-.nav-menu li a:focus-visible {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary-dark);
-}
-
-/* ---------- 7. Hero Section ---------- */
-.hero {
-  background-color: var(--color-primary-light);
-  padding: var(--space-8) 0 var(--space-6);
-  text-align: center;
-}
-.hero picture {
-  margin-bottom: var(--space-4);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-.hero-content {
-  max-width: 32rem;
-  margin-inline: auto;
-}
-.hero-title { @apply .h2; color: var(--color-primary-dark); margin-bottom: var(--space-2); }
-.hero-subtitle { color: var(--color-muted); margin-bottom: var(--space-4); }
-
-/* ---------- 8. Featured Products ---------- */
-.featured-products {
-  padding: var(--space-6) 0;
-}
-.product-grid {
-  display: grid;
-  gap: var(--space-4);
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.product-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  display: flex;
-  flex-direction: column;
-}
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-.product-card img {
-  width: 100%;
-  height: 14rem;
-  object-fit: cover;
-}
-.product-card .product-title {
-  @apply .h4;
-  margin: var(--space-2) var(--space-2) 0;
-  color: var(--color-primary-dark);
-}
-.product-card .product-desc {
-  flex-grow: 1;
-  padding: 0 var(--space-2) var(--space-2);
-  font-size: var(--font-size-base);
-  color: var(--color-muted);
-  line-height: 1.5;
-}
-.product-card .btn-outline {
-  margin: var(--space-2) var(--space-2) var(--space-3);
-  align-self: flex-start;
-}
-
-/* ---------- 9. Brand Story ---------- */
-.brand-story {
-  padding: var(--space-6) 0;
-  background-color: var(--color-surface);
-}
-.brand-text {
-  font-size: var(--font-size-lg);
-  line-height: 1.7;
-  color: var(--color-text);
-}
-
-/* ---------- 10. CTA WhatsApp ---------- */
-.cta-whatsapp {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
-  color: var(--color-surface);
-  text-align: center;
-  padding: var(--space-8) 0;
-}
-.cta-whatsapp .section-title { color: var(--color-surface); }
-.cta-whatsapp .cta-text { opacity: 0.9; max-width: 28rem; margin-inline: auto; }
-.cta-whatsapp .btn-primary {
-  background-color: var(--color-accent);
-  border: none;
-}
-.cta-whatsapp .btn-primary:hover {
-  background-color: var(--color-accent-dark);
-}
-.whatsapp-icon {
-  margin-left: var(--space-1);
-  transition: transform var(--transition-fast);
-}
-.btn-primary:hover .whatsapp-icon {
-  transform: translateX(2px);
-}
-
-/* ---------- 11. Newsletter ---------- */
-.newsletter {
-  padding: var(--space-6) 0;
-  background-color: var(--color-surface);
-}
-.newsletter-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-3);
-}
-.newsletter-form input[type="email"] {
-  flex: 1 1 200px;
-  min-width: 120px;
-  padding: var(--space-1_5) var(--space-2);
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-md);
-  font-size: var(--font-size-base);
-  transition: border-color var(--transition-normal);
-}
-.newsletter-form input[type="email"]:focus {
-  outline: none;
-  border-color: var(--color-primary);
-}
-.newsletter-form button {
-  flex: 0 0 auto;
-}
-
-/* ---------- 12. Footer ---------- */
-.site-footer {
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  padding: var(--space-4) 0;
-  font-size: var(--font-size-base);
-  color: var(--color-muted);
-}
-.site-footer .container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  justify-content: space-between;
-  align-items: center;
-}
-.footer-text, .footer-contact, .footer-schedule {
-  margin: 0;
-}
-.footer-contact a {
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-.footer-contact a:hover {
-  text-decoration: none;
-}
-
-/* ---------- 13. Responsive Breakpoints ---------- */
-@media (min-width: 640px) {
-  .nav-menu {
-    flex-direction: row;
-    gap: var(--space-4);
-  }
-  .nav-toggle {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .hero {
-    text-align: left;
-  }
-  .hero .container {
+header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--space-6);
-  }
-  .hero picture {
-    flex: 1 1 300px;
-    margin-bottom: 0;
-  }
-  .hero-content {
-    flex: 1 1 260px;
-    text-align: left;
-    margin-inline: 0;
-  }
+    padding: var(--spacing) 0;
 }
-/* End of styles.css */
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem var(--spacing);
+    background-color: var(--white);
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: var(--accent-color);
+}
+
+.featured-products {
+    padding: 4rem var(--spacing);
+    background-color: var(--white);
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing);
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    padding: var(--spacing);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing);
+}
+
+.product-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.product-card p {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.btn-sm {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-sm:hover {
+    background-color: var(--primary-color);
+}
+
+.cta-whatsapp {
+    text-align: center;
+    padding: 4rem var(--spacing);
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.cta-whatsapp h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.cta-whatsapp p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+}
+
+.cta-btn-large {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 16px 32px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.cta-btn-large:hover {
+    background-color: var(--primary-color);
+}
+
+.testimonials {
+    padding: 4rem var(--spacing);
+    background-color: var(--white);
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.testimonial {
+    background-color: #f0f8ff;
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing);
+    margin-bottom: var(--spacing);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem var(--spacing);
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
