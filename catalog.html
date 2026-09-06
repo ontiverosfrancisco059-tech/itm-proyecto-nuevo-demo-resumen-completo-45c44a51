@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - Proyecto Nuevo Demo - Resumen Completo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo" data-eb-editable data-eb-editable="text" data-eb-key="catalog.h1.1" data-eb-role="h1" data-eb-kind="text">Proyecto Nuevo Demo - Resumen Completo</h1>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" data-eb-editable="link" data-eb-key="catalog.a.2" data-eb-role="a" data-eb-kind="link">Home</a></li>
+          <li><a href="catalog.html" aria-current="page" data-eb-editable="link" data-eb-key="catalog.a.3" data-eb-role="a" data-eb-kind="link">Catalog</a></li>
+          <li><a href="about.html" data-eb-editable="link" data-eb-key="catalog.a.4" data-eb-role="a" data-eb-kind="link">About</a></li>
+          <li><a href="contact.html" data-eb-editable="link" data-eb-key="catalog.a.5" data-eb-role="a" data-eb-kind="link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="filter-bar container fade-in" data-eb-editable>
+      <h2 data-eb-editable="text" data-eb-key="catalog.h2.6" data-eb-role="h2" data-eb-kind="text">Filtrar productos</h2>
+      <!-- Placeholder for filters -->
+      <input type="text" placeholder="Buscar...">
+      <select>
+        <option value="">Categoría</option>
+        <option value="smartphones">Smartphones</option>
+        <option value="laptops">Laptops</option>
+        <option value="audio">Audio</option>
+      </select>
+      <button class="btn btn-secondary" data-eb-editable="link" data-eb-key="catalog.button.7" data-eb-role="button" data-eb-kind="link">Aplicar</button>
+    </section>
+
+    <section class="product-grid container fade-in" data-eb-editable>
+      <!-- Product cards will be inserted here -->
+      <p class="text-center" data-eb-editable="text" data-eb-key="catalog.p.8" data-eb-role="p" data-eb-kind="text">No hay productos disponibles actualmente.</p>
+    </section>
+
+    <section class="pagination container fade-in text-center" data-eb-editable>
+      <nav aria-label="Navegación de páginas">
+        <span>Página 1 de 1</span>
+      </nav>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-info">
+      <p data-eb-editable="text" data-eb-key="catalog.p.9" data-eb-role="p" data-eb-kind="text"><strong>Teléfono:</strong> 8112345678</p>
+      <p data-eb-editable="text" data-eb-key="catalog.p.10" data-eb-role="p" data-eb-kind="text"><strong>Horario:</strong> Lun-Sab 9am-7pm</p>
+      <p data-eb-editable="text" data-eb-key="catalog.p.11" data-eb-role="p" data-eb-kind="text"><strong>Objetivo:</strong> VENDER POR WHATSAPP Y CATALOGO</p>
+    </div>
+    <p data-eb-editable="text" data-eb-key="catalog.p.12" data-eb-role="p" data-eb-kind="text">&copy; <span id="year"></span> Proyecto Nuevo Demo - Resumen Completo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
