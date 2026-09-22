@@ -1,230 +1,387 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tienda Demo de Tecnología | Catálogo Monterrey</title>
-  <meta name="description" content="Tienda demo completa para pruebas. Venta y soporte de tecnología en Monterrey. Catálogo en línea y pedidos por WhatsApp.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Nuevo Demo - Resumen Completo | Tienda de Tecnología en Monterrey</title>
+<meta name="description" content="Tienda demo completa para pruebas. Tienda de tecnología en Monterrey. Venta por WhatsApp y catálogo. Lun-Sab 9am-7pm.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span class="topbar__item">Horario: Lun&ndash;Sab 9:00&ndash;19:00</span>
-      <span class="topbar__item topbar__city">Ciudad: Monterrey</span>
-      <a class="topbar__item topbar__link" href="tel:+528112345678" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Tel. 81 1234 5678</a>
-    </div>
-  </div>
-
-  <header class="header">
-    <div class="container header__inner">
-      <a class="logo" href="#inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
-        <span class="logo__mark">D</span>
-        <span class="logo__text">
-          <strong>DemoStore</strong>
-          <small>Tienda de Tecnología</small>
-        </span>
-      </a>
-
-      <nav class="nav" id="nav" aria-label="Navegación principal">
-        <a href="#inicio" class="nav__link" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#catalogo" class="nav__link" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Catálogo</a>
-        <a href="#servicios" class="nav__link" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Servicios</a>
-        <a href="#nosotros" class="nav__link" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Nosotros</a>
-        <a href="#contacto" class="nav__link" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Contacto</a>
-        <a href="#catalogo" class="btn btn--primary nav__cta" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Comprar por WhatsApp</a>
-      </nav>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav" data-eb-editable="link" data-eb-key="index.button.9" data-eb-role="button" data-eb-kind="link">
+<header class="topbar" id="inicio">
+  <div class="container topbar-inner">
+    <a class="brand" href="#inicio" aria-label="Inicio" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">
+      <span class="brand-mark">N<span class="brand-dot">·</span>D</span>
+      <span class="brand-text">
+        <strong>Proyecto Nuevo Demo</strong>
+        <small>Tienda de tecnología · Monterrey</small>
+      </span>
+    </a>
+    <nav class="nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#catalogo" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">Catálogo</a>
+      <a href="#categorias" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Categorías</a>
+      <a href="#servicios" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Servicios</a>
+      <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+      <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Opiniones</a>
+      <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Contacto</a>
+    </nav>
+    <div class="topbar-actions">
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20tecnolog%C3%ADa" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">WhatsApp · 81 1234 5678</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.9" data-eb-role="button" data-eb-kind="link">
         <span></span><span></span><span></span>
       </button>
     </div>
-  </header>
+  </div>
+  <div class="container profile-strip">
+    <span class="profile-strip-label">¿Ya nos visitaste? Guarda tu perfil y deja tu reseña:</span>
+    <span data-itm-profile data-project-id="45c44a51-2da8-422c-80dd-4a2fc7d07c59"></span>
+  </div>
+</header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <span class="badge">Venta y soporte de tecnología</span>
-          <h1 data-eb-editable="text" data-eb-key="index.h1.10" data-eb-role="h1" data-eb-kind="text">Proyecto Nuevo Demo <span>Resumen Completo</span></h1>
-          <p class="hero__lead" data-eb-editable="text" data-eb-key="index.p.11" data-eb-role="p" data-eb-kind="text">Tienda demo completa para pruebas. Explora nuestro catálogo en línea, encuentra lo que buscas y ordénalo directo por WhatsApp de forma rápida y segura.</p>
-          <div class="hero__actions">
-            <a href="#catalogo" class="btn btn--primary" data-eb-editable="link" data-eb-key="index.a.12" data-eb-role="a" data-eb-kind="link">Ver Catálogo</a>
-            <a href="https://wa.me/528112345678?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos" class="btn btn--ghost" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.13" data-eb-role="a" data-eb-kind="link">Escribir por WhatsApp</a>
-          </div>
-          <ul class="hero__stats">
-            <li><strong>Monterrey</strong><span>Ciudad</span></li>
-            <li><strong>Lun&ndash;Sab</strong><span>9am &ndash; 7pm</span></li>
-            <li><strong>WhatsApp</strong><span>Pedidos directos</span></li>
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.10" data-eb-role="p" data-eb-kind="text">Catálogo · Venta por WhatsApp · Soporte</p>
+      <h1 data-eb-editable="text" data-eb-key="index.h1.11" data-eb-role="h1" data-eb-kind="text">Tu tienda de tecnología en Monterrey, lista para atenderte por catálogo.</h1>
+      <p class="lead" data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text">Tienda demo completa para pruebas: laptops, smartphones, tablets y accesorios. Elige del catálogo y confirma tu pedido por WhatsApp en minutos.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#catalogo" data-eb-editable="link" data-eb-key="index.a.13" data-eb-role="a" data-eb-kind="link">Ver catálogo</a>
+        <a class="btn btn-outline" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20cotizar%20un%20equipo" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.14" data-eb-role="a" data-eb-kind="link">Cotizar por WhatsApp</a>
+      </div>
+      <ul class="hero-meta">
+        <li><strong>Lun–Sab</strong><span>9am – 7pm</span></li>
+        <li><strong>Monterrey</strong><span>Atención local</span></li>
+        <li><strong>Venta + Soporte</strong><span>Asesoría incluida</span></li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.pexels.com/photos/11297769/pexels-photo-11297769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Hero principal tienda de tecnologia" loading="eager" fetchpriority="high" data-eb-editable="image" data-eb-key="index.img.15" data-eb-role="img" data-eb-kind="image">
+      <div class="hero-card">
+        <p class="hero-card-title" data-eb-editable="text" data-eb-key="index.p.16" data-eb-role="p" data-eb-kind="text">Pedido en 3 pasos</p>
+        <ol>
+          <li>Elige producto del catálogo</li>
+          <li>Escríbenos por WhatsApp</li>
+          <li>Confirmamos stock y entrega</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CINTA -->
+<section class="ribbon" aria-label="Información rápida">
+  <div class="container ribbon-inner">
+    <span>Catálogo actualizado</span>
+    <span class="sep">·</span>
+    <span>Respuesta rápida Lun–Sab 9am–7pm</span>
+    <span class="sep">·</span>
+    <span>Tel / WhatsApp: 81 1234 5678</span>
+  </div>
+</section>
+
+<!-- DESTACADOS / CATALOGO -->
+<section class="section" id="catalogo">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">Catálogo</p>
+        <h2 data-eb-editable="text" data-eb-key="index.h2.18" data-eb-role="h2" data-eb-kind="text">Destacados para pedir hoy mismo</h2>
+        <p class="muted" data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Precios de demostración para cotizar por WhatsApp. Toca “Pedir” y te armamos el mensaje automáticamente.</p>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filtrar catálogo">
+        <button class="chip active" data-filter="all" type="button" data-eb-editable="link" data-eb-key="index.button.20" data-eb-role="button" data-eb-kind="link">Todo</button>
+        <button class="chip" data-filter="computo" type="button" data-eb-editable="link" data-eb-key="index.button.21" data-eb-role="button" data-eb-kind="link">Cómputo</button>
+        <button class="chip" data-filter="movil" type="button" data-eb-editable="link" data-eb-key="index.button.22" data-eb-role="button" data-eb-kind="link">Móvil</button>
+        <button class="chip" data-filter="audio" type="button" data-eb-editable="link" data-eb-key="index.button.23" data-eb-role="button" data-eb-kind="link">Audio</button>
+      </div>
+    </div>
+
+    <div class="grid cards" id="productGrid">
+      <article class="card" data-cat="computo">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/29502360/pexels-photo-29502360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Laptops destacadas en catalogo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.24" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">Laptops</span>
+        </div>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.25" data-eb-role="h3" data-eb-kind="text">Laptops para trabajo y estudio</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">Equipos nuevos, ideales para oficina, clases y home office. Te ayudamos a elegir RAM, disco y procesador.</p>
+          <ul class="specs">
+            <li>Desde 8 GB RAM / SSD</li>
+            <li>Garantía y setup inicial</li>
           </ul>
-        </div>
-        <div class="hero__card" aria-hidden="true">
-          <div class="hero__card-glow"></div>
-          <div class="hero__card-icon">&#128187;</div>
-          <h3 data-eb-editable="text" data-eb-key="index.h3.14" data-eb-role="h3" data-eb-kind="text">Catálogo Tech</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.15" data-eb-role="p" data-eb-kind="text">Todo listo para tu compra</p>
-          <div class="hero__card-chip">Envío a Monterrey</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features" aria-label="Beneficios">
-      <div class="container features__grid">
-        <article class="feature">
-          <span class="feature__icon">&#128666;</span>
-          <h3 data-eb-editable="text" data-eb-key="index.h3.16" data-eb-role="h3" data-eb-kind="text">Envíos locales</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">Entrega en Monterrey y área metropolitana.</p>
-        </article>
-        <article class="feature">
-          <span class="feature__icon">&#128172;</span>
-          <h3 data-eb-editable="text" data-eb-key="index.h3.18" data-eb-role="h3" data-eb-kind="text">Pedidos por WhatsApp</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Atención personalizada para cada compra.</p>
-        </article>
-        <article class="feature">
-          <span class="feature__icon">&#128737;&#65039;</span>
-          <h3 data-eb-editable="text" data-eb-key="index.h3.20" data-eb-role="h3" data-eb-kind="text">Soporte técnico</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">Te acompañamos antes y después de tu compra.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="catalog section" id="catalogo">
-      <div class="container">
-        <div class="section__head">
-          <span class="section__tag">Catálogo</span>
-          <h2 data-eb-editable="text" data-eb-key="index.h2.22" data-eb-role="h2" data-eb-kind="text">Nuestros productos</h2>
-          <p data-eb-editable="text" data-eb-key="index.p.23" data-eb-role="p" data-eb-kind="text">Selecciona una categoría o busca un producto. Al elegir uno, presiona el botón de WhatsApp para ordenarlo.</p>
-        </div>
-
-        <div class="catalog__controls">
-          <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría"></div>
-          <input type="search" id="searchInput" class="search" placeholder="Buscar producto&hellip;" aria-label="Buscar producto">
-        </div>
-
-        <div class="products" id="products"></div>
-        <p class="products__empty" id="emptyState" hidden data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">No encontramos productos con esa búsqueda.</p>
-      </div>
-    </section>
-
-    <section class="services section" id="servicios">
-      <div class="container">
-        <div class="section__head">
-          <span class="section__tag">Servicios</span>
-          <h2 data-eb-editable="text" data-eb-key="index.h2.25" data-eb-role="h2" data-eb-kind="text">Cómo compramos contigo</h2>
-        </div>
-        <div class="services__grid">
-          <article class="service">
-            <span class="service__num">01</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.26" data-eb-role="h3" data-eb-kind="text">Venta</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Catálogo actualizado con precios claros. Ordena por WhatsApp y confirma tu pedido en minutos.</p>
-          </article>
-          <article class="service">
-            <span class="service__num">02</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.28" data-eb-role="h3" data-eb-kind="text">Soporte</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">Asesoría técnica antes de comprar y soporte después de la entrega. Estamos para ayudarte.</p>
-          </article>
-          <article class="service">
-            <span class="service__num">03</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.30" data-eb-role="h3" data-eb-kind="text">Entrega</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.31" data-eb-role="p" data-eb-kind="text">Coordinamos la entrega en Monterrey. También puedes recoger tu producto en tienda.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section" id="nosotros">
-      <div class="container about__inner">
-        <div class="about__copy">
-          <span class="section__tag">Nosotros</span>
-          <h2 data-eb-editable="text" data-eb-key="index.h2.32" data-eb-role="h2" data-eb-kind="text">Proyecto Nuevo Demo</h2>
-          <p data-eb-editable="text" data-eb-key="index.p.33" data-eb-role="p" data-eb-kind="text"><strong>Resumen Completo</strong> es una tienda de tecnología en Monterrey creada como demo completa para pruebas de catálogo digital y venta por WhatsApp.</p>
-          <p data-eb-editable="text" data-eb-key="index.p.34" data-eb-role="p" data-eb-kind="text">Nuestro objetivo es claro: vender por WhatsApp y ofrecer un catálogo en línea sencillo, rápido y confiable para nuestros clientes.</p>
-          <div class="about__contact">
-            <strong>Horario de atención</strong>
-            <p data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Lunes a Sábado de 9:00 a 19:00 hrs</p>
+          <div class="card-foot">
+            <span class="price">Cotizar</span>
+            <a class="btn btn-primary btn-sm js-order" data-product="Laptops para trabajo y estudio" href="https://wa.me/528112345678?text=Hola%2C%20me%20interesan%20las%20Laptops%20para%20trabajo%20y%20estudio" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.27" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
           </div>
         </div>
-        <div class="about__panel">
-          <span class="about__panel-icon">&#128206;</span>
-          <h3 data-eb-editable="text" data-eb-key="index.h3.36" data-eb-role="h3" data-eb-kind="text">Catálogo a tu alcance</h3>
-          <p data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Explora los productos por categoría, búscalos por nombre y pídelos en un solo clic por WhatsApp.</p>
-          <a href="https://wa.me/528112345678" class="btn btn--primary" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.38" data-eb-role="a" data-eb-kind="link">Iniciar chat</a>
-        </div>
-      </div>
-    </section>
+      </article>
 
-    <section class="contact section" id="contacto">
-      <div class="container">
-        <div class="section__head">
-          <span class="section__tag">Contacto</span>
-          <h2 data-eb-editable="text" data-eb-key="index.h2.39" data-eb-role="h2" data-eb-kind="text">Hablemos por WhatsApp</h2>
-          <p data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">¿Dudas sobre algún producto? Escríbenos y te respondemos lo antes posible.</p>
+      <article class="card" data-cat="movil">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/27350774/pexels-photo-27350774.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Smartphones destacados" loading="lazy" data-eb-editable="image" data-eb-key="index.img.28" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">Smartphones</span>
         </div>
-        <div class="contact__grid">
-          <a class="contact__card" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20cotizar%20un%20producto" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.41" data-eb-role="a" data-eb-kind="link">
-            <span class="contact__icon">&#128172;</span>
-            <strong>WhatsApp</strong>
-            <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">+52 81 1234 5678</p>
-          </a>
-          <a class="contact__card" href="tel:+528112345678" data-eb-editable="link" data-eb-key="index.a.43" data-eb-role="a" data-eb-kind="link">
-            <span class="contact__icon">&#128222;</span>
-            <strong>Teléfono</strong>
-            <p data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text">81 1234 5678</p>
-          </a>
-          <div class="contact__card">
-            <span class="contact__icon">&#128205;</span>
-            <strong>Ubicación</strong>
-            <p data-eb-editable="text" data-eb-key="index.p.45" data-eb-role="p" data-eb-kind="text">Monterrey, N.L.</p>
-          </div>
-          <div class="contact__card">
-            <span class="contact__icon">&#128337;</span>
-            <strong>Horario</strong>
-            <p data-eb-editable="text" data-eb-key="index.p.46" data-eb-role="p" data-eb-kind="text">Lun&ndash;Sab 9:00&ndash;19:00</p>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.29" data-eb-role="h3" data-eb-kind="text">Smartphones última generación</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Venta de celulares por WhatsApp: cámaras avanzadas, gran batería y funda de regalo en modelos seleccionados.</p>
+          <ul class="specs">
+            <li>128 GB / 256 GB</li>
+            <li>Entrega y configuración</li>
+          </ul>
+          <div class="card-foot">
+            <span class="price">Cotizar</span>
+            <a class="btn btn-primary btn-sm js-order" data-product="Smartphones última generación" href="https://wa.me/528112345678?text=Hola%2C%20me%20interesan%20los%20Smartphones%20de%20su%20cat%C3%A1logo" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.31" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </article>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a class="logo logo--footer" href="#inicio" data-eb-editable="link" data-eb-key="index.a.47" data-eb-role="a" data-eb-kind="link">
-          <span class="logo__mark">D</span>
-          <span class="logo__text"><strong>DemoStore</strong><small>Tienda de Tecnología</small></span>
-        </a>
-        <p data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">Proyecto Nuevo Demo &mdash; Resumen Completo. Tienda demo de tecnología en Monterrey.</p>
+      <article class="card" data-cat="audio">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/7417547/pexels-photo-7417547.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Audifonos y accesorios" loading="lazy" data-eb-editable="image" data-eb-key="index.img.32" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">Audio</span>
+        </div>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.33" data-eb-role="h3" data-eb-kind="text">Audífonos y accesorios</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.34" data-eb-role="p" data-eb-kind="text">Earphones inalámbricos, cargadores, fundas y más. Complementa tu equipo con accesorios originales.</p>
+          <ul class="specs">
+            <li>Bluetooth / Estuche de carga</li>
+            <li>Prueba en tienda</li>
+          </ul>
+          <div class="card-foot">
+            <span class="price">Cotizar</span>
+            <a class="btn btn-primary btn-sm js-order" data-product="Audífonos y accesorios" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20info%20de%20Aud%C3%ADfonos%20y%20accesorios" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.35" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="computo">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/20762607/pexels-photo-20762607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Categoria computo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.36" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">Cómputo</span>
+        </div>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.37" data-eb-role="h3" data-eb-kind="text">Estaciones de cómputo</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.38" data-eb-role="p" data-eb-kind="text">Monitores, teclados y workstations para armar tu espacio de trabajo con asesoría de compatibilidad.</p>
+          <ul class="specs">
+            <li>Monitores y teclados</li>
+            <li>Armado a medida</li>
+          </ul>
+          <div class="card-foot">
+            <span class="price">Cotizar</span>
+            <a class="btn btn-primary btn-sm js-order" data-product="Estaciones de cómputo" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20cotizar%20equipo%20de%20c%C3%B3mputo" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.39" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="movil">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Categoria movil y tablets" loading="lazy" data-eb-editable="image" data-eb-key="index.img.40" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">Móvil y tablets</span>
+        </div>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.41" data-eb-role="h3" data-eb-kind="text">Tablets y ecosistema móvil</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Tablets, smartphones y audífonos en combo. Ideal para escuela, lectura, video y trabajo ligero.</p>
+          <ul class="specs">
+            <li>Combos tablet + accesorios</li>
+            <li>Traspaso de datos incluido</li>
+          </ul>
+          <div class="card-foot">
+            <span class="price">Cotizar</span>
+            <a class="btn btn-primary btn-sm js-order" data-product="Tablets y ecosistema móvil" href="https://wa.me/528112345678?text=Hola%2C%20quiero%20info%20de%20Tablets%20y%20m%C3%B3vil" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.43" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="audio">
+        <div class="card-media">
+          <img src="https://images.pexels.com/photos/31076950/pexels-photo-31076950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior de tienda demo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.44" data-eb-role="img" data-eb-kind="image">
+          <span class="tag">En tienda</span>
+        </div>
+        <div class="card-body">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.45" data-eb-role="h3" data-eb-kind="text">Teclados y gadgets en piso</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.46" data-eb-role="p" data-eb-kind="text">Ven a probar teclados mecánicos y gadgets disponibles en nuestra tienda demo en Monterrey.</p>
+          <ul class="specs">
+            <li>Prueba física Lun–Sab</li>
+            <li>Asesoría en español</li>
+          </ul>
+          <div class="card-foot">
+            <span class="price">Visítanos</span>
+            <a class="btn btn-outline btn-sm" href="#contacto" data-eb-editable="link" data-eb-key="index.a.47" data-eb-role="a" data-eb-kind="link">Cómo llegar</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="note" data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">¿No ves lo que buscas? Escríbenos: conseguimos el modelo que necesitas sobre pedido.</p>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="section section-alt" id="categorias">
+  <div class="container">
+    <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.49" data-eb-role="p" data-eb-kind="text">Explora por categoría</p>
+    <h2 data-eb-editable="text" data-eb-key="index.h2.50" data-eb-role="h2" data-eb-kind="text">Dos rutas rápidas para comprar</h2>
+    <div class="grid two">
+      <a class="cat-card" href="#catalogo" data-goto-filter="computo" data-eb-editable="link" data-eb-key="index.a.51" data-eb-role="a" data-eb-kind="link">
+        <img src="https://images.pexels.com/photos/20762607/pexels-photo-20762607.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Categoria computo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.52" data-eb-role="img" data-eb-kind="image">
+        <div class="cat-overlay">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.53" data-eb-role="h3" data-eb-kind="text">Cómputo</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.54" data-eb-role="p" data-eb-kind="text">Laptops, monitores, teclados y workstations.</p>
+          <span class="link-more">Ver productos</span>
+        </div>
+      </a>
+      <a class="cat-card" href="#catalogo" data-goto-filter="movil" data-eb-editable="link" data-eb-key="index.a.55" data-eb-role="a" data-eb-kind="link">
+        <img src="https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Categoria movil y tablets" loading="lazy" data-eb-editable="image" data-eb-key="index.img.56" data-eb-role="img" data-eb-kind="image">
+        <div class="cat-overlay">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.57" data-eb-role="h3" data-eb-kind="text">Móvil y tablets</h3>
+          <p data-eb-editable="text" data-eb-key="index.p.58" data-eb-role="p" data-eb-kind="text">Celulares, tablets, wearables y accesorios.</p>
+          <span class="link-more">Ver productos</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="section" id="servicios">
+  <div class="container split">
+    <div class="split-media">
+      <img src="https://images.pexels.com/photos/35278544/pexels-photo-35278544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Servicio venta y soporte" loading="lazy" data-eb-editable="image" data-eb-key="index.img.59" data-eb-role="img" data-eb-kind="image">
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">Servicios</p>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.61" data-eb-role="h2" data-eb-kind="text">Venta con soporte real, no solo caja cerrada</h2>
+      <div class="service-list">
+        <div class="service">
+          <span class="service-num">01</span>
+          <div><h3 data-eb-editable="text" data-eb-key="index.h3.62" data-eb-role="h3" data-eb-kind="text">Venta asesorada</h3><p data-eb-editable="text" data-eb-key="index.p.63" data-eb-role="p" data-eb-kind="text">Te recomendamos el equipo según tu presupuesto y uso: escuela, oficina, gaming o negocio.</p></div>
+        </div>
+        <div class="service">
+          <span class="service-num">02</span>
+          <div><h3 data-eb-editable="text" data-eb-key="index.h3.64" data-eb-role="h3" data-eb-kind="text">Soporte y configuración</h3><p data-eb-editable="text" data-eb-key="index.p.65" data-eb-role="p" data-eb-kind="text">Instalación inicial, traspaso de datos, cuentas y optimización para que estrenes sin fricción.</p></div>
+        </div>
+        <div class="service">
+          <span class="service-num">03</span>
+          <div><h3 data-eb-editable="text" data-eb-key="index.h3.66" data-eb-role="h3" data-eb-kind="text">Pedido por WhatsApp</h3><p data-eb-editable="text" data-eb-key="index.p.67" data-eb-role="p" data-eb-kind="text">Cotiza, aparta y confirma por WhatsApp al 81 1234 5678. Atención Lun–Sab 9am–7pm.</p></div>
+        </div>
       </div>
-      <div class="footer__col">
-        <h4 data-eb-editable="text" data-eb-key="index.h4.49" data-eb-role="h4" data-eb-kind="text">Navegación</h4>
-        <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.50" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#catalogo" data-eb-editable="link" data-eb-key="index.a.51" data-eb-role="a" data-eb-kind="link">Catálogo</a>
-        <a href="#servicios" data-eb-editable="link" data-eb-key="index.a.52" data-eb-role="a" data-eb-kind="link">Servicios</a>
-        <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.53" data-eb-role="a" data-eb-kind="link">Contacto</a>
+      <a class="btn btn-primary" href="https://wa.me/528112345678?text=Hola%2C%20necesito%20soporte%20para%20mi%20equipo" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.68" data-eb-role="a" data-eb-kind="link">Solicitar soporte</a>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="section section-alt" id="nosotros">
+  <div class="container split reverse">
+    <div class="split-copy">
+      <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.69" data-eb-role="p" data-eb-kind="text">Nosotros</p>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.70" data-eb-role="h2" data-eb-kind="text">Tienda local en Monterrey, trato directo</h2>
+      <p data-eb-editable="text" data-eb-key="index.p.71" data-eb-role="p" data-eb-kind="text">Somos <strong>Proyecto Nuevo Demo - Resumen Completo</strong>, una tienda demo completa para pruebas con enfoque en venta por WhatsApp y catálogo. Creemos en la atención clara: stock real, precios claros y soporte postventa.</p>
+      <dl class="facts">
+        <div><dt>Horario</dt><dd>Lun-Sab 9am-7pm</dd></div>
+        <div><dt>Ciudad</dt><dd>Monterrey</dd></div>
+        <div><dt>Contacto</dt><dd>81 1234 5678</dd></div>
+        <div><dt>Objetivo</dt><dd>Vender por WhatsApp y catálogo</dd></div>
+      </dl>
+    </div>
+    <div class="split-media duo">
+      <img src="https://images.pexels.com/photos/17565491/pexels-photo-17565491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Fachada y zona de atencion" loading="lazy" data-eb-editable="image" data-eb-key="index.img.72" data-eb-role="img" data-eb-kind="image">
+      <img src="https://images.pexels.com/photos/31076950/pexels-photo-31076950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior de tienda demo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.73" data-eb-role="img" data-eb-kind="image">
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES / RESEÑAS -->
+<section class="section reviews" id="opiniones">
+  <div class="container">
+    <div class="reviews-head">
+      <div>
+        <p class="eyebrow eyebrow-light" data-eb-editable="text" data-eb-key="index.p.74" data-eb-role="p" data-eb-kind="text">Opiniones de clientes</p>
+        <h2 data-eb-editable="text" data-eb-key="index.h2.75" data-eb-role="h2" data-eb-kind="text">Experiencias reales, tu voz cuenta</h2>
+        <p class="reviews-intro" data-eb-editable="text" data-eb-key="index.p.76" data-eb-role="p" data-eb-kind="text">Aquí puedes <strong>iniciar sesión con Google</strong>, <strong>guardar tu nombre</strong> y un <strong>teléfono opcional que siempre permanece privado</strong>. Después <strong>califica con estrellas</strong> y <strong>publica tu comentario</strong>. Puedes <strong>cerrar sesión</strong> cuando quieras y <strong>editar o eliminar tus propios comentarios</strong>. Publicamos únicamente tu nombre, nunca tu teléfono.</p>
       </div>
-      <div class="footer__col">
-        <h4 data-eb-editable="text" data-eb-key="index.h4.54" data-eb-role="h4" data-eb-kind="text">Contacto</h4>
-        <a href="tel:+528112345678" data-eb-editable="link" data-eb-key="index.a.55" data-eb-role="a" data-eb-kind="link">81 1234 5678</a>
-        <a href="https://wa.me/528112345678" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.56" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
-        <span>Monterrey, N.L.</span>
+      <div class="reviews-steps" aria-label="Cómo dejar una reseña">
+        <div class="step"><span>1</span><p data-eb-editable="text" data-eb-key="index.p.77" data-eb-role="p" data-eb-kind="text">Inicia sesión con Google</p></div>
+        <div class="step"><span>2</span><p data-eb-editable="text" data-eb-key="index.p.78" data-eb-role="p" data-eb-kind="text">Guarda nombre + teléfono privado opcional</p></div>
+        <div class="step"><span>3</span><p data-eb-editable="text" data-eb-key="index.p.79" data-eb-role="p" data-eb-kind="text">Califica con estrellas y publica</p></div>
       </div>
     </div>
-    <div class="container footer__bottom">
-      <p data-eb-editable="text" data-eb-key="index.p.57" data-eb-role="p" data-eb-kind="text">&copy; 2026 Proyecto Nuevo Demo &mdash; Resumen Completo. Sitio demo.</p>
+
+    <div class="reviews-shell" data-itm-comments-shell>
+      <div class="reviews-notice">
+        <strong>Zona interactiva de reseñas.</strong>
+        <span>El inicio de sesión, perfil, estrellas, publicación, edición y cierre de sesión los gestiona automáticamente el módulo de comentarios. Solo se muestra públicamente el nombre del visitante.</span>
+      </div>
+      <div data-itm-comments data-project-id="45c44a51-2da8-422c-80dd-4a2fc7d07c59"></div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <a href="https://wa.me/528112345678?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20productos" class="wa-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp" data-eb-editable="link" data-eb-key="index.a.58" data-eb-role="a" data-eb-kind="link">
-    <svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><path fill="#fff" d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.7 6L4 29l8.2-1.6c1.2.5 2.5.8 3.8.8 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.1 0-2.2-.2-3.3-.6l-.6-.3-4.9 1 1-4.8-.4-.6c-1.6-2.3-2.4-5-2.4-7.6 0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9 9.8zm5.4-7.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7-.1c-1-.5-1.8-1-2.5-2.1-.4-.6-.8-1.3-.7-1.5s.3-.5.5-.6l.5-.6c.1-.2.2-.3.3-.5v-.4c0-.2-.6-1.4-.8-1.9s-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
-  </a>
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="container split">
+    <div class="split-media">
+      <img src="https://images.pexels.com/photos/4132538/pexels-photo-4132538.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Contacto WhatsApp ventas" loading="lazy" data-eb-editable="image" data-eb-key="index.img.80" data-eb-role="img" data-eb-kind="image">
+    </div>
+    <div class="split-copy contact-box">
+      <p class="eyebrow" data-eb-editable="text" data-eb-key="index.p.81" data-eb-role="p" data-eb-kind="text">Contacto</p>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.82" data-eb-role="h2" data-eb-kind="text">Pide por WhatsApp en un mensaje</h2>
+      <p class="muted" data-eb-editable="text" data-eb-key="index.p.83" data-eb-role="p" data-eb-kind="text">Elige tus productos, escríbenos y confirmamos disponibilidad, precio final y entrega.</p>
+      <form id="quoteForm" class="quote-form" aria-label="Armar pedido por WhatsApp">
+        <label>Tu nombre
+          <input type="text" id="qName" name="name" placeholder="Ej. Mariana G." autocomplete="name">
+        </label>
+        <label>¿Qué te interesa?
+          <select id="qInterest" name="interest">
+            <option value="Catálogo general">Catálogo general</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Smartphone">Smartphone</option>
+            <option value="Tablet">Tablet</option>
+            <option value="Audífonos / accesorios">Audífonos / accesorios</option>
+            <option value="Soporte técnico">Soporte técnico</option>
+          </select>
+        </label>
+        <label>Mensaje
+          <textarea id="qMsg" name="message" rows="3" placeholder="Ej. Busco laptop para universidad, presupuesto $12,000"></textarea>
+        </label>
+        <button class="btn btn-whatsapp" type="submit" data-eb-editable="link" data-eb-key="index.button.84" data-eb-role="button" data-eb-kind="link">Enviar pedido por WhatsApp</button>
+      </form>
+      <ul class="contact-list">
+        <li><strong>WhatsApp / Tel:</strong> <a href="https://wa.me/528112345678" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.85" data-eb-role="a" data-eb-kind="link">81 1234 5678</a></li>
+        <li><strong>Horario:</strong> Lun-Sab 9am-7pm</li>
+        <li><strong>Ciudad:</strong> Monterrey</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
 
-  <button class="back-top" id="backTop" aria-label="Volver arriba" data-eb-editable="link" data-eb-key="index.button.59" data-eb-role="button" data-eb-kind="link">&uarr;</button>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="brand-mark" data-eb-editable="text" data-eb-key="index.p.86" data-eb-role="p" data-eb-kind="text">N<span class="brand-dot">·</span>D</p>
+      <p data-eb-editable="text" data-eb-key="index.p.87" data-eb-role="p" data-eb-kind="text"><strong>Proyecto Nuevo Demo - Resumen Completo</strong><br>Tienda de tecnología · Monterrey · Lun-Sab 9am-7pm</p>
+      <a class="btn btn-whatsapp btn-sm" href="https://wa.me/528112345678" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.88" data-eb-role="a" data-eb-kind="link">81 1234 5678</a>
+    </div>
+    <nav aria-label="Mapa del sitio">
+      <a href="#catalogo" data-eb-editable="link" data-eb-key="index.a.89" data-eb-role="a" data-eb-kind="link">Catálogo</a>
+      <a href="#categorias" data-eb-editable="link" data-eb-key="index.a.90" data-eb-role="a" data-eb-kind="link">Categorías</a>
+      <a href="#servicios" data-eb-editable="link" data-eb-key="index.a.91" data-eb-role="a" data-eb-kind="link">Servicios</a>
+      <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.92" data-eb-role="a" data-eb-kind="link">Opiniones</a>
+      <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.93" data-eb-role="a" data-eb-kind="link">Contacto</a>
+    </nav>
+    <div class="credits">
+      <p data-eb-editable="text" data-eb-key="index.p.94" data-eb-role="p" data-eb-kind="text">Fotografía: Pexels (Mathias Reding, Julio Lopez, Andrey Matveev, Lorencius Stefanus, Jakub Zerdzicki, cottonbro studio, Sebastian Luna, Jimmy Liao, Trung Tâm Máy Văn Phòng 24H, Anton) bajo Licencia Pexels.</p>
+    </div>
+  </div>
+  <p class="legal" data-eb-editable="text" data-eb-key="index.p.95" data-eb-role="p" data-eb-kind="text">© 2026 Proyecto Nuevo Demo. Sitio demostrativo para pruebas.</p>
+</footer>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+<script src="script.js" defer></script>
+<script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
 </body>
 </html>
